@@ -90,7 +90,7 @@ body {
   text-transform: uppercase;
   padding: 1.8rem 3rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .btn:hover {
   background-color: #b28451;
@@ -114,6 +114,9 @@ body {
 
 .sidebar {
   background-color: #c69963;
+  position: fixed;
+  width: 8rem;
+  height: 100vh;
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1/-1;
   display: flex;
@@ -301,12 +304,16 @@ body {
     margin-bottom: 0;
   }
 }
+.feature:hover .feature__icon {
+  transform: translateY(5rem);
+}
 .feature__icon {
   fill: #c69963;
   width: 4.5rem;
   height: 4.5rem;
   grid-row: 1/span 2;
   transform: translateY(-1rem);
+  transition: all 1s;
 }
 .feature__text {
   font-size: 1.7rem;

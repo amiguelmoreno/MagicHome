@@ -3,7 +3,7 @@
 
     margin: 15rem 0;
 
-    @supports(display: grid) {
+    @supports (display: grid) {
         display: grid;
         //grid-template-columns: repeat(3, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -12,14 +12,12 @@
     }
 }
 
-
 .feature {
-
     float: left;
     width: 33.3333%;
     margin-bottom: 6rem;
 
-    @supports(display: grid) {
+    @supports (display: grid) {
         width: auto;
         margin-bottom: 0;
     }
@@ -29,12 +27,17 @@
     grid-row-gap: 1.5rem;
     grid-column-gap: 2.5rem;
 
+    &:hover &__icon {
+        transform: translateY(5rem);
+    }
+
     &__icon {
         fill: $color-primary;
         width: 4.5rem;
         height: 4.5rem;
         grid-row: 1 / span 2;
         transform: translateY(-1rem);
+        transition: all 1s;
     }
 
     &__text {
