@@ -1,0 +1,19 @@
+.sucess-message {
+    display: inline;
+    position: fixed;
+    left: -50%;
+    bottom: 10%;
+    border-radius: 10px;
+    background-color: rgb(90, 173, 90);
+    z-index: 9999;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    color: $color-white;
+    font-weight: 400;
+    transform: translateX(-50%);
+    transition: left 0.5s;
+
+    &--active {
+        left: 50%;
+    }
+}

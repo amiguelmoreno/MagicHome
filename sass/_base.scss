@@ -30,9 +30,11 @@ $bp-small: 37.5em; // 600px;
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    scroll-behavior: smooth;
 }
 
 html {
+    scroll-behavior: smooth;
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
 
@@ -60,7 +62,7 @@ body {
         [center-end] minmax(6rem, 1fr) [full-end];
 
     @media only screen and (max-width: $bp-large) {
-        grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+        grid-template-rows: 80vh min-content min-content repeat(3, min-content);
         grid-template-columns:
             [full-start] minmax(6rem, 1fr) [center-start] repeat(
                 8,
@@ -70,6 +72,6 @@ body {
     }
 
     @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 6rem calc(100vh - 6rem);
+        grid-template-rows: 85vh min-content;
     }
 }

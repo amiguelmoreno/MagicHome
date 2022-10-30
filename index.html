@@ -11,28 +11,35 @@
     </head>
     <body class="container">
         <div class="sidebar">
-            <input type="checkbox" class="sidebar__checkbox" id="navi-toggle" />
-
-            <label for="navi-toggle" class="sidebar__button">
-                <span class="sidebar__icon">&nbsp;</span>
+            <div class="sidebar__button">
+                <span class="sidebar__icon"
+                    ><div class="sidebar__icon-line-1"></div>
+                    <div class="sidebar__icon-line-2"></div>
+                    <div class="sidebar__icon-line-3"></div
+                ></span>
                 <p class="sidebar__text">MENU</p>
-            </label>
+            </div>
 
             <div class="sidebar__background">&nbsp;</div>
 
             <nav class="sidebar__nav">
                 <ul class="sidebar__list">
                     <li class="sidebar__item">
-                        <a href="#" class="sidebar__link">About us</a>
+                        <a href="#home" class="sidebar__link">Home</a>
                     </li>
                     <li class="sidebar__item">
-                        <a href="#" class="sidebar__link">Properties</a>
+                        <a href="#about" class="sidebar__link">About us</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#properties" class="sidebar__link"
+                            >Properties</a
+                        >
                     </li>
                     <li class="sidebar__item">
                         <a href="#" class="sidebar__link">Testimonials</a>
                     </li>
                     <li class="sidebar__item">
-                        <a href="#" class="sidebar__link">Gallery</a>
+                        <a href="#gallery" class="sidebar__link">Gallery</a>
                     </li>
                     <li class="sidebar__item">
                         <a href="#" class="sidebar__link">Contact us</a>
@@ -41,7 +48,7 @@
             </nav>
         </div>
 
-        <header class="header">
+        <header id="home" class="header">
             <div class="header__logo">
                 <img
                     src="img/logo.png"
@@ -51,7 +58,9 @@
             </div>
             <h3 class="heading-3">Your own home:</h3>
             <h1 class="heading-1">The ultimate personal freedom</h1>
-            <button class="btn header__btn">View our properties</button>
+            <a href="#properties" class="btn header__btn"
+                >View our properties</a
+            >
             <div class="header__seenon-text">Seen on</div>
             <div class="header__seenon-logos">
                 <img src="img/logo-bbc.png" alt="logo-bbc" />
@@ -96,7 +105,7 @@
             </div>
         </div>
 
-        <section class="features">
+        <section id="about" class="features">
             <div class="feature">
                 <svg class="feature__icon">
                     <use xlink:href="img/sprite.svg#icon-global"></use>
@@ -172,7 +181,26 @@
             </div>
         </section>
 
-        <section class="homes">
+        <section class="newsletter">
+            <p class="newsletter__text">
+                Want to be updated with the lastest properties available?
+                Suscribe to our newsletter!
+            </p>
+            <form class="newsletter__form" action="#">
+                <input
+                    class="newsletter__email"
+                    type="email"
+                    placeholder="Email"
+                />
+                <input
+                    class="newsletter__submit"
+                    type="submit"
+                    value="Suscribe!"
+                />
+            </form>
+        </section>
+
+        <section id="properties" class="homes">
             <div class="home">
                 <img src="img/house-1.jpeg" alt="House 1" class="home__img" />
                 <svg class="home__like">
@@ -384,7 +412,7 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <!-- <section id="gallery" class="gallery">
             <figure class="gallery__item gallery__item--1">
                 <img
                     src="img/gal-1.jpeg"
@@ -483,6 +511,116 @@
                     class="gallery__img"
                 />
             </figure>
+        </section> -->
+
+        <section class="testimonials">
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="img/video.mp4" type="video/mp4" />
+                    Your browser is not supported!
+                </video>
+            </div>
+            <div class="slider">
+                <div class="slide slide--1">
+                    <div class="testimonial">
+                        <h5 class="testimonial__header">
+                            Best financial decision ever!
+                        </h5>
+                        <blockquote class="testimonial__text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Accusantium quas quisquam non? Quas voluptate
+                            nulla minima deleniti optio ullam nesciunt, numquam
+                            corporis et asperiores laboriosam sunt, praesentium
+                            suscipit blanditiis.
+                        </blockquote>
+                        <address class="testimonial__author">
+                            <img
+                                src="img/user-1.jpg"
+                                alt=""
+                                class="testimonial__photo"
+                            />
+                            <h6 class="testimonial__name">Aarav Lynn</h6>
+                            <p class="testimonial__location">
+                                San Francisco, USA
+                            </p>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="slide slide--2">
+                    <div class="testimonial">
+                        <h5 class="testimonial__header">
+                            The last step to becoming a complete minimalist
+                        </h5>
+                        <blockquote class="testimonial__text">
+                            Quisquam itaque deserunt ullam, quia ea repellendus
+                            provident, ducimus neque ipsam modi voluptatibus
+                            doloremque, corrupti laborum. Incidunt numquam
+                            perferendis veritatis neque repellendus.
+                        </blockquote>
+                        <address class="testimonial__author">
+                            <img
+                                src="img/user-2.jpg"
+                                alt=""
+                                class="testimonial__photo"
+                            />
+                            <h6 class="testimonial__name">Miyah Miles</h6>
+                            <p class="testimonial__location">London, UK</p>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="slide slide--3">
+                    <div class="testimonial">
+                        <h5 class="testimonial__header">
+                            Finally free from old-school banks
+                        </h5>
+                        <blockquote class="testimonial__text">
+                            Debitis, nihil sit minus suscipit magni aperiam vel
+                            tenetur incidunt commodi architecto numquam omnis
+                            nulla autem, necessitatibus blanditiis modi
+                            similique quidem. Odio aliquam culpa dicta beatae
+                            quod maiores ipsa minus consequatur error sunt.
+                        </blockquote>
+                        <address class="testimonial__author">
+                            <img
+                                src="img/user-3.jpg"
+                                alt=""
+                                class="testimonial__photo"
+                            />
+                            <h6 class="testimonial__name">Francisco Gomes</h6>
+                            <p class="testimonial__location">
+                                Lisbon, Portugal
+                            </p>
+                        </address>
+                    </div>
+                </div>
+
+                <button class="slider__btn slider__btn--left">&larr;</button>
+                <button class="slider__btn slider__btn--right">&rarr;</button>
+                <div class="dots"></div>
+            </div>
         </section>
+
+        <section class="form-section">
+            <form class="form" action="#">
+                <p>Contact us</p>
+                <div class="form__item">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required />
+                </div>
+                <div class="form__item">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required />
+                </div>
+                <div class="form__item">
+                    <label for="request"></label>
+                    <input type="text" name="request" id="request" />
+                </div>
+                <input type="submit" value="Send" />
+            </form>
+        </section>
+
+        <p class="sucess-message"></p>
     </body>
 </html>

@@ -1,0 +1,57 @@
+.newsletter {
+    grid-column: full-start / full-end;
+    background-color: $color-secondary;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-display;
+    gap: 3rem;
+
+    &__text {
+        display: inline-block;
+        align-self: start;
+        font-weight: 300;
+        font-family: inherit;
+        font-size: 2.5rem;
+        color: $color-white;
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        gap: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__email {
+        font-size: 1.5rem;
+        border: 3px solid transparent;
+        font-family: inherit;
+        border-radius: 10px;
+        padding: 1.5rem 2rem;
+        width: 60rem;
+        transition: width 0.4s;
+
+        &:focus {
+            outline: none;
+            border: 3px solid $color-primary;
+            width: 62rem;
+        }
+    }
+
+    &__submit {
+        font-family: inherit;
+        font-size: 2rem;
+        border: none;
+        border-radius: 10px;
+        padding: 1.5rem 2rem;
+        width: 20rem;
+        color: $color-white;
+        background-color: $color-primary;
+    }
+}
