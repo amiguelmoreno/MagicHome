@@ -29,7 +29,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content repeat(3, min-content);
+  grid-template-rows: 80vh repeat(5, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 @media only screen and (max-width: 62.5em) {
@@ -646,19 +646,131 @@ body {
   left: 50%;
 }
 
-.form-section {
-  position: relative;
+.contact {
   grid-column: full-start/full-end;
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #101d2c;
+}
+.contact__btn {
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  border: none;
+  font-size: 3.5rem;
+  background-color: #c69963;
+  padding: 3rem 6rem;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.contact__btn:hover {
+  transform: scale(1.08);
+}
+.contact__btn:active {
+  transform: scale(1.04);
+}
+
+.form-section {
+  width: 100vw;
+  height: 100vh;
+  position: ab;
   padding: 6rem 10rem;
+  background-color: #fff;
+}
+
+.modal {
+  font-family: "Josefin Sans", sans-serif;
+  position: fixed;
+  color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+.modal__header {
+  font-size: 3.25rem;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+}
+.modal__form {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+.modal__form > input, .modal__form > select {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.2;
+  outline: none;
+}
+.modal__form > input:focus, .modal__form > select:focus {
+  outline: none;
+  border: 3px solid #c69963;
+}
+.modal__form label {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.modal__form input {
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  border: 3px solid rgb(231, 231, 231);
+  border-radius: 0.5rem;
+}
+.modal__form .btn {
+  text-decoration: none;
+  border: none;
+  padding-top: 15px;
+  grid-column: 1/span 2;
+  width: 60%;
+  align-self: center;
+  justify-self: center;
+  margin-top: 1.5rem;
+}
+.modal__form select {
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  border: 3px solid rgb(231, 231, 231);
+  border-radius: 0.5rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 50rem;
-  background-color: transparent;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .testimonials {
   grid-column: full-start/full-end;
   position: relative;
-  height: 50rem;
+  padding: 5rem 0 3rem;
   font-family: "Josefin Sans", sans-serif;
 }
 

@@ -412,106 +412,9 @@
             </div>
         </section>
 
-        <!-- <section id="gallery" class="gallery">
-            <figure class="gallery__item gallery__item--1">
-                <img
-                    src="img/gal-1.jpeg"
-                    alt="Gallery image 1"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img
-                    src="img/gal-2.jpeg"
-                    alt="Gallery image 2"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--3">
-                <img
-                    src="img/gal-3.jpeg"
-                    alt="Gallery image 3"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--4">
-                <img
-                    src="img/gal-4.jpeg"
-                    alt="Gallery image 4"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--5">
-                <img
-                    src="img/gal-5.jpeg"
-                    alt="Gallery image 5"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--6">
-                <img
-                    src="img/gal-6.jpeg"
-                    alt="Gallery image 6"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--7">
-                <img
-                    src="img/gal-7.jpeg"
-                    alt="Gallery image 7"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--8">
-                <img
-                    src="img/gal-8.jpeg"
-                    alt="Gallery image 8"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--9">
-                <img
-                    src="img/gal-9.jpeg"
-                    alt="Gallery image 9"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--10">
-                <img
-                    src="img/gal-10.jpeg"
-                    alt="Gallery image 10"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--11">
-                <img
-                    src="img/gal-11.jpeg"
-                    alt="Gallery image 11"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--12">
-                <img
-                    src="img/gal-12.jpeg"
-                    alt="Gallery image 12"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--13">
-                <img
-                    src="img/gal-13.jpeg"
-                    alt="Gallery image 13"
-                    class="gallery__img"
-                />
-            </figure>
-            <figure class="gallery__item gallery__item--14">
-                <img
-                    src="img/gal-14.jpeg"
-                    alt="Gallery image 14"
-                    class="gallery__img"
-                />
-            </figure>
-        </section> -->
+        <section class="contact">
+            <button class="contact__btn btn--show-modal">Contact us</button>
+        </section>
 
         <section class="testimonials">
             <div class="bg-video">
@@ -602,24 +505,34 @@
             </div>
         </section>
 
-        <section class="form-section">
-            <form class="form" action="#">
-                <p>Contact us</p>
-                <div class="form__item">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required />
-                </div>
-                <div class="form__item">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required />
-                </div>
-                <div class="form__item">
-                    <label for="request"></label>
-                    <input type="text" name="request" id="request" />
-                </div>
-                <input type="submit" value="Send" />
+        <div class="modal hidden">
+            <button class="btn--close-modal">&times;</button>
+            <h2 class="modal__header">
+                Open your bank account <br />
+                in just <span class="highlight">5 minutes</span>
+            </h2>
+            <form class="modal__form">
+                <label>First Name</label>
+                <input type="text" required />
+                <label>Last Name</label>
+                <input type="text" required />
+                <label>Email Address</label>
+                <input type="email" required />
+                <label for="realtor">Select realtor:</label>
+                <select name="realtor" id="realtor" form="modal__form" required>
+                    <option value="erik">Erik Feinman</option>
+                    <option value="kim">Kim Brown</option>
+                    <option value="toby">Toby Ramsey</option>
+                    <option value="random">
+                        No preference (first realtor available)
+                    </option>
+                </select>
+                <input type="submit" class="btn btn__submit" value="Send" />
             </form>
-        </section>
+        </div>
+        <div class="overlay hidden"></div>
+
+        <footer></footer>
 
         <p class="sucess-message"></p>
     </body>

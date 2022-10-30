@@ -4,9 +4,10 @@ const icon = document.querySelector(".sidebar__icon");
 const sideBackground = document.querySelector(".sidebar__background");
 const nav = document.querySelector(".sidebar__nav");
 const navLink = document.querySelectorAll(".sidebar__link");
-const form = document.querySelector(".newsletter__form");
+const formNews = document.querySelector(".newsletter__form");
 const succesMsg = document.querySelector(".sucess-message");
 
+//////////////////////////////////////////////////////
 // SIDEBAR FUNCTIONALITY
 toggleNav = function () {
     icon.classList.toggle("show");
@@ -16,6 +17,7 @@ toggleNav = function () {
 
 [btn, ...navLink].forEach((el) => el.addEventListener("click", toggleNav));
 
+/////////////////////////////////////////////
 // NEWSLETTER
 
 checkMessage = function (msg) {
@@ -28,13 +30,14 @@ checkMessage = function (msg) {
     );
 };
 
-form.addEventListener("submit", function (e) {
+formNews.addEventListener("submit", function (e) {
     e.preventDefault();
-    form.querySelector(".newsletter__email").value = "";
-    form.querySelector(".newsletter__email").blur();
+    formNews.querySelector(".newsletter__email").value = "";
+    formNews.querySelector(".newsletter__email").blur();
     checkMessage("You have suscribed to the newsletter!");
 });
 
+//////////////////////////////////////////////////////
 // SLIDER
 
 const slider = function () {
@@ -116,3 +119,53 @@ const slider = function () {
     });
 };
 slider();
+
+///////////////////////////////////////////////////
+// Modal window
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".btn--close-modal");
+const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
+const homesBtns = document.querySelectorAll(".home__btn");
+const btnSubmit = document.querySelector(".btn__submit");
+const formContact = document.querySelector(".modal__form");
+const allInputs = formContact.querySelectorAll("input");
+
+console.log(allInputs);
+
+homesBtns.forEach((el) => el.classList.add(".btn--show-modal"));
+
+const openModal = function (e) {
+    e.preventDefault();
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+};
+
+const closeModal = function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+};
+
+[...homesBtns, ...btnsOpenModal].forEach((btn) =>
+    btn.addEventListener("click", openModal)
+);
+
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+    }
+});
+
+formContact.addEventListener("submit", function (e) {
+    e.preventDefault();
+    allInputs.forEach((el) => {
+        if (el.classList.contains("btn__submit")) {
+        } else el.value = "";
+    });
+    checkMessage("Message sent");
+    closeModal();
+});

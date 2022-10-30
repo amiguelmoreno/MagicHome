@@ -1,8 +1,98 @@
-.form-section {
-    position: relative;
-    grid-column: full-start / full-end;
-    padding: 6rem 10rem;
+.modal {
+    font-family: $font-display;
+    position: fixed;
+    color: $color-black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60rem;
+    background-color: #f3f3f3;
+    padding: 5rem 6rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.5s;
+
+    &__header {
+        font-size: 3.25rem;
+        margin-bottom: 4.5rem;
+        line-height: 1.5;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    &__form > input,
+    &__form > select {
+        font-family: $font-display;
+        line-height: 1.2;
+        outline: none;
+
+        &:focus {
+            outline: none;
+            border: 3px solid $color-primary;
+        }
+    }
+
+    &__form label {
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+
+    &__form input {
+        font-size: 1.7rem;
+        padding: 1rem 1.5rem;
+        border: 3px solid $color-grey-light-3;
+        border-radius: 0.5rem;
+    }
+
+    &__form .btn {
+        text-decoration: none;
+        border: none;
+        padding-top: 15px;
+        grid-column: 1 / span 2;
+        width: 60%;
+        align-self: center;
+        justify-self: center;
+        margin-top: 1.5rem;
+    }
+
+    &__form select {
+        font-size: 1.7rem;
+        padding: 1rem 1.5rem;
+        border: 3px solid $color-grey-light-3;
+        border-radius: 0.5rem;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 50rem;
-    background-color: transparent;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.btn--close-modal {
+    font-family: inherit;
+    color: inherit;
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }
