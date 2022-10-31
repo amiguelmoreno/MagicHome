@@ -39,7 +39,7 @@
 .slider__btn {
     position: absolute;
     top: 50%;
-    z-index: 10;
+    z-index: 5;
 
     border: none;
     background: rgba($color-grey-light-1, 0.7);
@@ -55,11 +55,17 @@
 .slider__btn--left {
     left: 6%;
     transform: translate(-50%, -50%);
+    @media only screen and (max-width: $bp-small) {
+        left: 8%;
+    }
 }
 
 .slider__btn--right {
     right: 6%;
     transform: translate(50%, -50%);
+    @media only screen and (max-width: $bp-small) {
+        right: 8%;
+    }
 }
 
 .dots {

@@ -12,8 +12,12 @@
     z-index: 1000;
     transition: all 0.5s;
 
+    @media only screen and (max-width: $bp-small) {
+        min-width: 90%;
+    }
+
     &__header {
-        font-size: 3.25rem;
+        font-size: 3.5rem;
         margin-bottom: 4.5rem;
         line-height: 1.5;
     }
@@ -23,6 +27,14 @@
         grid-template-columns: max-content 1fr;
         align-items: center;
         gap: 2.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            gap: 1.5rem;
+
+            & > * {
+                grid-column: span 2;
+            }
+        }
     }
 
     &__form > input,
@@ -57,7 +69,7 @@
         width: 60%;
         align-self: center;
         justify-self: center;
-        margin-top: 1.5rem;
+        margin-top: 3rem;
     }
 
     &__form select {

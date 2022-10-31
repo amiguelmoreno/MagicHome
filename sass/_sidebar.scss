@@ -111,6 +111,15 @@
             color: $color-primary;
             transform: translateX(1rem);
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            &:hover,
+            &:active {
+                background-position: inherit;
+                color: inherit;
+                transform: none;
+            }
+        }
     }
 
     &__background--active {

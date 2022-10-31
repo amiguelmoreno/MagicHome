@@ -36,13 +36,9 @@
                         >
                     </li>
                     <li class="sidebar__item">
-                        <a href="#" class="sidebar__link">Testimonials</a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a href="#gallery" class="sidebar__link">Gallery</a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a href="#" class="sidebar__link">Contact us</a>
+                        <a href="#testimonials" class="sidebar__link"
+                            >Testimonials</a
+                        >
                     </li>
                 </ul>
             </nav>
@@ -416,7 +412,7 @@
             <button class="contact__btn btn--show-modal">Contact us</button>
         </section>
 
-        <section class="testimonials">
+        <section id="testimonials" class="testimonials">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.mp4" type="video/mp4" />
@@ -507,10 +503,7 @@
 
         <div class="modal hidden">
             <button class="btn--close-modal">&times;</button>
-            <h2 class="modal__header">
-                Open your bank account <br />
-                in just <span class="highlight">5 minutes</span>
-            </h2>
+            <h2 class="modal__header">Contact us</h2>
             <form class="modal__form">
                 <label>First Name</label>
                 <input type="text" required />
@@ -532,7 +525,31 @@
         </div>
         <div class="overlay hidden"></div>
 
-        <footer></footer>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img src="./img/logo.png" alt="" />
+            </div>
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Find your dream home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Request proposal</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Download home planner</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Contact us</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Submit your property</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Come work with us!</a>
+                </li>
+            </ul>
+        </footer>
 
         <p class="sucess-message"></p>
     </body>
