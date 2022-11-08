@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main goal of this proyect is to use almost everything I have learnt about <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo"> and <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo">. I wanted this project to be exclusively HTML and CSS but for some functionalities I had to use  <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo">.
+The main goal of this proyect is to use almost everything I have learnt about <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo"> and <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo"> and <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo"> fundamentals.
 <br />
 <br />
 ### What did I used to get the best of this project?
@@ -59,6 +59,15 @@ The main goal of this proyect is to use almost everything I have learnt about <i
     * Pseudo-classes
     * Media Queries
 
+
+### What interesting components can I find?
+
+    * PRO Navigation Bar, that converts itself into a floating menu on smaller devices
+    
+    * Testimonials Slider
+    
+    * Modal Window Form
+    
 
 <!-- GETTING STARTED -->
 ## Getting Started
