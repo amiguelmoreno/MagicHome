@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://amiguelmoreno.github.io/MagicHome/">
     <img src="img/logo.png" alt="Logo" width="180">
   </a>
 
