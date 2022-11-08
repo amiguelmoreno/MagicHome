@@ -7,7 +7,7 @@
   <br />
   <br />
   <p align="center">
-    Landing Page build with <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo">,  <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo">,   <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo">
+    Full Responsive Landing Page build with <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo">,  <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo"> using <img src="https://img.shields.io/badge/-SASS-ff69b4" alt="Logo"> and <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo">
     <br />
     <br />
     <a href="https://amiguelmoreno.github.io/MagicHome/"><strong>Let's have a look! »</strong></a>
@@ -35,14 +35,29 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main goal of this proyect is to use almost everything I have learnt about <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo"> and <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo">. I wanted this project to be exclusively HTML and CSS but for some functionalities I had to use  <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo">
+The main goal of this proyect is to use almost everything I have learnt about <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo"> and <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo">. I wanted this project to be exclusively HTML and CSS but for some functionalities I had to use  <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo">.
+<br />
+<br />
+### What did I used to get the best of this project?
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+  * Best Practices:
+    * BEM method to name classes in CSS and HTML  
+    * Keep It Organized
+    * Make It Understandable
+  
+  * <img src="https://img.shields.io/badge/-SASS-ff69b4" alt="Logo"> as a CSS pre-processor. Which offer:
+    * Efficient syntax
+    * Readable styles files
+    * Reusable components (@mixins and @extends)
+  
+  * <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo"> features:
+    * Flexbox 
+    * Grid
+    * Animations
+    * Variables
+    * Pseudo-elements
+    * Pseudo-classes
+    * Media Queries
 
 
 <!-- GETTING STARTED -->
