@@ -77,26 +77,6 @@ The main goal of this proyect is to use almost everything I have learnt about <i
    * Modal Window Form
     
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-   
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -116,7 +96,9 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Miguel Moreno 
+
+[![LinkedIn][linkedin-shield]][linkedin-url] 
 
 Project Link: https://amiguelmoreno.github.io/MagicHome/
 
