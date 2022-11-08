@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main goal of this proyect is to use almost everything I have learnt about <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo"> and <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo"> and <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo"> fundamentals.
+The main goal of this proyect is to use almost everything I have learnt about <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo"> and <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo"> and some <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo"> fundamentals.
 <br />
 <br />
 ### What did I used to get the best of this project?
@@ -59,14 +59,22 @@ The main goal of this proyect is to use almost everything I have learnt about <i
     * Pseudo-classes
     * Media Queries
 
+  * <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo"> most used methods:
+    * querySelector(), querySelectorAll()
+    * toggle()
+    * forEach()
+    * addEventListener()
+    * insertAdjacentHTML()
+    * contains()
+
 
 ### What interesting components can I find?
-
-    * PRO Navigation Bar, that converts itself into a floating menu on smaller devices
     
-    * Testimonials Slider
+   * PRO Navigation Bar, that converts itself into a floating menu on smaller devices
     
-    * Modal Window Form
+   * Testimonials Slider
+    
+   * Modal Window Form
     
 
 <!-- GETTING STARTED -->
