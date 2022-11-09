@@ -26,7 +26,7 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#posible-extra-features-and-improvements">Posible extra features and improvements</a>
     </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -77,7 +77,15 @@ The main goal of this proyect is to use almost everything I have learnt about <i
    * Testimonials Slider
     
    * Modal Window Form
-    
+
+
+## Posible extra features and improvements
+
+Some features I would like to add are:
+
+ * Compress the size of the images reducing them to the maximum size used in the page
+ * Use diferent size images for each media query to improve performance
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
