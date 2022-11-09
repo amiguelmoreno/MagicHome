@@ -98,8 +98,6 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Miguel Moreno 
-
 [![LinkedIn][linkedin-shield]][linkedin-url] 
 
 Project Link: https://amiguelmoreno.github.io/MagicHome/
