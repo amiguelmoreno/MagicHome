@@ -113,7 +113,7 @@ Don't forget to give the project a star! Thanks again!
 
 [![LinkedIn][linkedin-shield]][linkedin-url] 
 
-Project Link: https://amiguelmoreno.github.io/MagicHome/
+Project Link: https://magichome.netlify.app/
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
