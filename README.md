@@ -42,7 +42,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The main goal of this proyect is to use almost everything I have learnt about <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo"> and <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo"> and some <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo"> fundamentals.
+The main goal of this proyect is to use almost everything I have learnt about <img src="https://img.shields.io/badge/-HTML5-orange" alt="Logo"> and <img src="https://img.shields.io/badge/-CSS3-blue" alt="Logo"> and some <img src="https://img.shields.io/badge/-JS-yellow" alt="Logo"> fundamentals. This is a improved version of a project that I did in Jonas Schmedtmann course.
 <br />
 <br />
 ### What did I used to get the best of this project?
