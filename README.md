@@ -17,7 +17,7 @@
   </a>
     <br />
     <br />
-    <a href="https://amiguelmoreno.github.io/MagicHome/"><strong>Let's have a look! »</strong></a>
+    <a href="https://magichome.netlify.app/"><strong>Let's have a look! »</strong></a>
     <br />
     <br />
   </p>
