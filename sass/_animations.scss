@@ -1,0 +1,125 @@
+// =====================
+// HEADER LOAD ANIMATIONS
+// =====================
+
+@keyframes mh-fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mh-fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-4rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes mh-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mh-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.header {
+    &__logo {
+        animation: mh-fadeInDown 0.8s ease both 0.1s;
+    }
+
+    .heading-3 {
+        animation: mh-fadeInLeft 0.8s ease both 0.3s;
+    }
+
+    .heading-1 {
+        animation: mh-fadeInLeft 0.9s ease both 0.5s;
+    }
+
+    &__btn {
+        animation: mh-fadeInUp 0.8s ease both 0.8s;
+    }
+
+    &__seenon-text {
+        animation: mh-fadeIn 0.9s ease both 1.1s;
+    }
+
+    &__seenon-logos {
+        animation: mh-fadeIn 1s ease both 1.3s;
+    }
+}
+
+// =====================
+// HOVER ENHANCEMENTS
+// =====================
+
+.slider__btn {
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        background-color: rgba($color-primary, 0.85);
+        color: $color-white;
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+    }
+}
+
+.newsletter__submit {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        background-color: $color-primary-dark;
+        transform: translateY(-2px);
+    }
+}
+
+.realtors__img {
+    transition: transform 0.35s, filter 0.35s;
+
+    &:hover {
+        transform: scale(1.08);
+        filter: brightness(1.12);
+    }
+}
+
+.nav__link {
+    &:link,
+    &:visited {
+        border-bottom: 2px solid transparent;
+        transition: all 0.25s, border-bottom 0.25s;
+    }
+
+    &:hover,
+    &:active {
+        border-bottom: 2px solid $color-primary;
+    }
+}
+
+.sidebar__button {
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
