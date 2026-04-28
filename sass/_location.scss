@@ -1,0 +1,78 @@
+@use 'variables' as *;
+
+.location {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 52rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr;
+    }
+
+    &__info {
+        background-color: $color-secondary;
+        padding: 7rem 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 5rem 3rem;
+        }
+    }
+
+    &__contact {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 1.8rem 4rem;
+        margin-top: 1rem;
+        align-items: baseline;
+    }
+
+    &__label {
+        font-family: $font-display;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: $color-primary;
+    }
+
+    &__value {
+        font-size: 1.6rem;
+        color: $color-grey-light-1;
+        line-height: 1.9;
+        margin: 0;
+    }
+
+    &__map {
+        position: relative;
+        min-height: 45rem;
+        overflow: hidden;
+
+        // warm gradient overlay blending map into info panel
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to right,
+                rgba($color-secondary, 0.35) 0%,
+                transparent 35%
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: saturate(0.65) contrast(1.05) sepia(0.1);
+        }
+    }
+}

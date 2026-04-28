@@ -127,59 +127,44 @@ formContact.addEventListener('submit', function(e) {
 ///////////////////////////////////////////////////
 // SCROLL REVEAL ANIMATIONS
 const initScrollReveal = function() {
-    const setup = function(el, fromTransform, delay = 0) {
-        el.style.opacity = '0';
-        el.style.transform = fromTransform;
-        el.style.transition = `opacity 0.75s ease ${delay}ms, transform 0.75s ease ${delay}ms`;
-    };
-    const reveal = function(el) {
-        const from = el.style.transform;
-        el.style.opacity = '1';
-        el.style.transform = from.includes('scale') ? 'scale(1)' : 'translate(0, 0)';
-        el.addEventListener('transitionend', ()=>{
-            el.style.opacity = '';
-            el.style.transform = '';
-            el.style.transition = '';
-        }, {
-            once: true
-        });
-    };
-    const observe = function(elements, fromTransform, threshold = 0.12) {
-        const observer = new IntersectionObserver((entries)=>{
-            entries.forEach((entry)=>{
+    const revealGroup = function(elements, fromTransform, toTransform, stagger) {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
                 if (!entry.isIntersecting) return;
-                reveal(entry.target);
-                observer.unobserve(entry.target);
+                const el = entry.target;
+                el.style.opacity = '1';
+                el.style.transform = toTransform;
+                el.addEventListener('transitionend', function() {
+                    el.style.cssText = '';
+                }, {
+                    once: true
+                });
+                observer.unobserve(el);
             });
         }, {
-            threshold,
-            rootMargin: '0px 0px -40px 0px'
+            threshold: 0.05
         });
-        elements.forEach((el, i)=>{
-            setup(el, fromTransform, i * 110);
+        elements.forEach(function(el, i) {
+            el.style.opacity = '0';
+            el.style.transform = fromTransform;
+            el.style.transition = `opacity 0.7s ease ${i * stagger}ms, transform 0.7s ease ${i * stagger}ms`;
             observer.observe(el);
         });
     };
-    const features = [
-        ...document.querySelectorAll('.feature')
-    ];
-    const homes = [
-        ...document.querySelectorAll('.home')
-    ];
+    revealGroup(document.querySelectorAll('.feature'), 'translateY(5rem)', 'translateY(0)', 110);
+    revealGroup(document.querySelectorAll('.home'), 'translateY(5rem)', 'translateY(0)', 80);
     const realtors = document.querySelector('.realtors');
     const newsletter = document.querySelector('.newsletter');
     const contact = document.querySelector('.contact');
-    observe(features, 'translateY(5rem)');
-    observe(homes, 'translateY(5rem)');
-    if (realtors) observe([
+    if (realtors) revealGroup([
         realtors
-    ], 'translateX(5rem)', 0.15);
-    if (newsletter) observe([
+    ], 'translateX(5rem)', 'translateX(0)', 0);
+    if (newsletter) revealGroup([
         newsletter
-    ], 'translateY(4rem)', 0.2);
-    if (contact) observe([
+    ], 'translateY(4rem)', 'translateY(0)', 0);
+    if (contact) revealGroup([
         contact
-    ], 'scale(0.95)', 0.3);
+    ], 'scale(0.95)', 'scale(1)', 0);
 };
 initScrollReveal();
 

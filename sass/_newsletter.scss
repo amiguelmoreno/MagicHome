@@ -1,3 +1,4 @@
+@use 'variables' as *;
 .newsletter {
     grid-column: full-start / full-end;
     background-color: $color-secondary;
