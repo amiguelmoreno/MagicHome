@@ -8,9 +8,11 @@
         <title>Magic Home</title>
         <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-        <!-- Self-hosted fonts — preload critical ones -->
+        <!-- Self-hosted fonts — preload all 4 to flatten the dependency chain -->
         <link rel="preload" as="font" href="fonts/josefin-sans.woff2" type="font/woff2" crossorigin />
+        <link rel="preload" as="font" href="fonts/josefin-sans-italic.woff2" type="font/woff2" crossorigin />
         <link rel="preload" as="font" href="fonts/nunito.woff2" type="font/woff2" crossorigin />
+        <link rel="preload" as="font" href="fonts/nunito-italic.woff2" type="font/woff2" crossorigin />
 
         <!-- Preload hero image (LCP element) — mobile gets smaller version -->
         <link rel="preload" as="image" href="img/hero-mobile.webp" type="image/webp" fetchpriority="high" media="(max-width: 600px)" />
