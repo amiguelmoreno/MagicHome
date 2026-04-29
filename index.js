@@ -115,7 +115,6 @@ const slider = function () {
         autoPlay = setInterval(nextSlide, 5000);
     });
 };
-slider();
 
 ///////////////////////////////////////////////////
 // MODAL WINDOW
@@ -200,4 +199,12 @@ const initScrollReveal = function () {
     if (contact) revealGroup([contact], 'scale(0.95)', 'scale(1)', 0);
 };
 
-initScrollReveal();
+// Defer non-critical JS until after LCP paints
+window.addEventListener('load', function () {
+    slider();
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initScrollReveal, { timeout: 2000 });
+    } else {
+        setTimeout(initScrollReveal, 200);
+    }
+});

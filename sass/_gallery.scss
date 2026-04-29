@@ -1,5 +1,7 @@
 @use 'variables' as *;
 .gallery {
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 300px;
     background-color: $color-grey-light-1;
     grid-column: full-start / full-end;
 

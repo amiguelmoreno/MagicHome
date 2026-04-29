@@ -1,5 +1,7 @@
 @use 'variables' as *;
 .newsletter {
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 200px;
     grid-column: full-start / full-end;
     background-color: $color-secondary;
     padding: 3rem 5rem;
