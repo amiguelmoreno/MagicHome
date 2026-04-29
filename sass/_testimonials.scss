@@ -144,7 +144,9 @@
     &__photo {
         grid-row: 1 / span 2;
         width: 6.5rem;
+        height: 6.5rem;
         border-radius: 50%;
+        object-fit: cover;
     }
 
     &__name {

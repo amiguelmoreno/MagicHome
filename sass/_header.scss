@@ -42,6 +42,7 @@
 
     &__logo-img {
         width: 100%;
+        height: auto;
     }
 
     &__btn {
@@ -95,6 +96,7 @@
         img {
             max-height: 2.5rem;
             max-width: 100%;
+            width: auto;
             filter: brightness(70%);
             transition: filter 0.3s;
 
