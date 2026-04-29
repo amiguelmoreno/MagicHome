@@ -26,6 +26,14 @@ body {
     line-height: 1.6;
 }
 
+main {
+    display: contents;
+}
+
+picture {
+    display: contents;
+}
+
 .container {
     display: grid;
     grid-template-rows: 85vh;

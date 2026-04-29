@@ -6,7 +6,10 @@
             rgba($color-secondary, 0.93),
             rgba($color-secondary, 0.93)
         ),
-        url(../img/hero.jpeg);
+        image-set(
+            url(../img/hero.webp) type("image/webp"),
+            url(../img/hero.jpeg) type("image/jpeg")
+        );
     background-size: cover;
     background-position: center;
     padding: 8rem;
@@ -49,6 +52,7 @@
         display: inline-block;
         font-weight: 400;
         transition: transform 0.3s;
+        color: $color-secondary;
 
         @media only screen and (max-width: $bp-small) {
             justify-self: center;

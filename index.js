@@ -52,18 +52,19 @@ const slider = function () {
         slides.forEach(function (_, i) {
             dotContainer.insertAdjacentHTML(
                 'beforeend',
-                `<button class='dots__dot' data-slide='${i}'></button>`
+                `<button class='dots__dot' data-slide='${i}' aria-label='Go to slide ${i + 1}' role='tab'></button>`
             );
         });
     };
 
     const activateDot = function (slide) {
-        document
-            .querySelectorAll('.dots__dot')
-            .forEach(dot => dot.classList.remove('dots__dot--active'));
-        document
-            .querySelector(`.dots__dot[data-slide='${slide}']`)
-            .classList.add('dots__dot--active');
+        document.querySelectorAll('.dots__dot').forEach(dot => {
+            dot.classList.remove('dots__dot--active');
+            dot.setAttribute('aria-selected', 'false');
+        });
+        const activeDot = document.querySelector(`.dots__dot[data-slide='${slide}']`);
+        activeDot.classList.add('dots__dot--active');
+        activeDot.setAttribute('aria-selected', 'true');
     };
 
     const goToSlide = function (slide) {
