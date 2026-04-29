@@ -117,6 +117,28 @@ const slider = function () {
 };
 
 ///////////////////////////////////////////////////
+// LIKE TOGGLE
+
+const likeButtons = document.querySelectorAll('.home__like');
+const LIKED_KEY = 'magichome_liked';
+
+const getLiked = () => JSON.parse(localStorage.getItem(LIKED_KEY) || '[]');
+const saveLiked = arr => localStorage.setItem(LIKED_KEY, JSON.stringify(arr));
+
+likeButtons.forEach((btn, i) => {
+    if (getLiked().includes(i)) btn.classList.add('home__like--active');
+
+    btn.addEventListener('click', function () {
+        const liked = getLiked();
+        const isLiked = liked.includes(i);
+        saveLiked(isLiked ? liked.filter(idx => idx !== i) : [...liked, i]);
+        btn.classList.toggle('home__like--active', !isLiked);
+        btn.style.transform = 'scale(1.3)';
+        setTimeout(() => (btn.style.transform = ''), 200);
+    });
+});
+
+///////////////////////////////////////////////////
 // MODAL WINDOW
 
 const modal = document.querySelector('.modal');
@@ -179,10 +201,13 @@ const initScrollReveal = function () {
             { threshold: 0.05 }
         );
 
+        // Write all styles first, then batch reads (observer.observe may read layout)
         elements.forEach(function (el, i) {
             el.style.opacity = '0';
             el.style.transform = fromTransform;
             el.style.transition = `opacity 0.7s ease ${i * stagger}ms, transform 0.7s ease ${i * stagger}ms`;
+        });
+        elements.forEach(function (el) {
             observer.observe(el);
         });
     };
