@@ -32,6 +32,10 @@ main {
 
 picture {
     display: contents;
+
+    & > source {
+        display: none;
+    }
 }
 
 .container {

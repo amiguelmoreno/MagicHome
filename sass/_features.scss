@@ -1,7 +1,5 @@
 @use 'variables' as *;
 .features {
-    content-visibility: auto;
-    contain-intrinsic-block-size: auto 600px;
     grid-column: center-start / center-end;
 
     margin: 15rem 0;

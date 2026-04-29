@@ -1,7 +1,5 @@
 @use 'variables' as *;
 .homes {
-    content-visibility: auto;
-    contain-intrinsic-block-size: auto 1000px;
     grid-column: center-start / center-end;
     margin: 15rem 0;
 

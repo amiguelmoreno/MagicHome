@@ -1,7 +1,5 @@
 @use 'variables' as *;
 .contact {
-    content-visibility: auto;
-    contain-intrinsic-block-size: auto 200px;
     grid-column: full-start / full-end;
     text-align: center;
     padding: 5rem 0;
