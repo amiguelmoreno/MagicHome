@@ -8,11 +8,9 @@
         <title>Magic Home</title>
         <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-        <!-- Google Fonts: non-blocking async load -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" /></noscript>
+        <!-- Self-hosted fonts — preload critical ones -->
+        <link rel="preload" as="font" href="fonts/josefin-sans.woff2" type="font/woff2" crossorigin />
+        <link rel="preload" as="font" href="fonts/nunito.woff2" type="font/woff2" crossorigin />
 
         <!-- Preload hero image (LCP element) — mobile gets smaller version -->
         <link rel="preload" as="image" href="img/hero-mobile.webp" type="image/webp" fetchpriority="high" media="(max-width: 600px)" />
