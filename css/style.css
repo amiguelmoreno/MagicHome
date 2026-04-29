@@ -291,6 +291,7 @@ picture > source {
 }
 @media only screen and (max-width: 37.5em) {
   .header {
+    background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), image-set(url(../img/hero-mobile.webp) type("image/webp"), url(../img/hero.jpeg) type("image/jpeg"));
     padding: 5rem;
   }
   .header h1 {
