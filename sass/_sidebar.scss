@@ -4,6 +4,7 @@
     position: fixed;
     width: 8rem;
     height: 100vh;
+    height: 100dvh;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
     z-index: 10;
@@ -62,6 +63,7 @@
 
     &__nav {
         height: 100vh;
+        height: 100dvh;
         position: fixed;
         bottom: 0rem;
         right: 0rem;
